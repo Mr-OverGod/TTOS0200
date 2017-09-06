@@ -11,7 +11,7 @@ namespace Hello
   }
   class Testi
   {
-    static void Main(string[] args)
+    static void BlackJack(string[] args)
     {
       //käytä Mainia ohjelmien kutsumiseen, älä kirjoita koodia tänne vaan aliohjelmiin
       //SayHello();
