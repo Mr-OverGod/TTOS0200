@@ -2,9 +2,10 @@
 /// <summary>
 /// A simple example of Blackjack card game
 /// </summary>
+namespace Hello { 
 class BlackJack
 {
-    static void Main()
+    public static void PlayBlackJack()
     {
         int myNumber = 17;
         int theirNumber;
@@ -30,4 +31,5 @@ class BlackJack
             }
         }
     }
+}
 }

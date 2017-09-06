@@ -11,13 +11,14 @@ namespace Hello
   }
   class Testi
   {
-    static void BlackJack(string[] args)
+    static void Main(string[] args)
     {
-      //käytä Mainia ohjelmien kutsumiseen, älä kirjoita koodia tänne vaan aliohjelmiin
-      //SayHello();
-      //ShowNames();
-      //staattisen ohjelman kutsuminen toisesta luokasta
-      Hello.Lotto.DrawLotto();
+            //käytä Mainia ohjelmien kutsumiseen, älä kirjoita koodia tänne vaan aliohjelmiin
+            //SayHello();
+            //ShowNames();
+            //staattisen ohjelman kutsuminen toisesta luokasta
+            //Hello.Lotto.DrawLotto();
+            Hello.BlackJack.PlayBlackJack();
     }
 
     static void ShowNames()
