@@ -327,6 +327,211 @@ class lab01
         Console.ReadKey();
             Console.WriteLine();
     }
+                public static void tehtava10()
+        {
+            int[] arvosanat = { 1, 2, 33, 44, 55, 68, 77, 69, 100 };
+            int hep;
+            for (int i = 0; i < 9; i++)
+            {
+
+                Console.Write("numerot: " + arvosanat[i]);
+                hep = arvosanat[i] % 2;
+                if (hep == 0) Console.WriteLine(" HEP!");
+                else Console.WriteLine("");
+            }
+
+            Console.ReadLine();
+
+        }
+
+        public static void tehtava12()
+        {
+            int[] luvut = new int[5];
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write("Anna luku: ");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+            Console.Write("Numerot järjestyksessä: ");
+            Array.Sort(luvut);
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write(luvut[i]);
+                if (i != luvut.Length) Console.Write(",");
+            }
+            Console.WriteLine();
+            Console.ReadLine();
+
+        }
+
+        public static void tehtava13()
+        {
+            int kaikki = 0;
+            int[] luvut = new int[5];
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write("Anna pisteet: ");
+                luvut[i] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(luvut);
+            luvut[0] = 0;
+            luvut[4] = 0;
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                kaikki = kaikki + luvut[i];
+            }
+            Console.WriteLine("Kokonaispisteet yhteensä: " + kaikki);
+            Console.ReadLine();
+        }
+
+        public static void tehtava14()
+        {
+            int luku = 0;
+            int[] luvut = new int[6];
+            while (luku != 11)
+            {
+
+                luvut[luku] = luvut[luku] + 1;
+                Console.Write("Anna arvosanat ja lopeta antamalla numero 11: ");
+                luku = int.Parse(Console.ReadLine());
+            }
+            luvut[0] = luvut[0] - 1;
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write(i + ": ");
+                for (int j = 0; j < luvut[i]; j++)
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+                Console.ReadLine();
+            }
+        }
+
+        public static void tehtava15()
+        {
+            int kerros;
+            int merkki = 1;
+            Console.Write("Kuinka korkean puun haluat: ");
+            kerros = int.Parse(Console.ReadLine());
+            for (int i = 0; i < kerros - 2; i++)
+            {
+                for (int j = 0; j < kerros - i - 1; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < i * 2 + 1; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+                
+
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                for (int x = 0; x < kerros - 1; x++)
+                {
+                    Console.Write(" ");
+
+                }
+                Console.WriteLine("*");
+                Console.ReadLine();
+            }
+        }
+
+        public static void tehtava16()
+        {
+            Random rnd = new Random();
+            int numero = rnd.Next(1, 100);
+            int arvaus=0, maara = 0;
+            Console.Write("Arvaa randomin valitsema numero väliltä 1-100: ");
+            
+            while (numero != arvaus)
+            {                
+                arvaus = int.Parse(Console.ReadLine());
+                maara++;
+                if (arvaus > numero)Console.Write("Se on pienempi: ");
+                if (arvaus < numero)Console.Write("Se on suurempi: ");
+                
+            } 
+            Console.WriteLine("Onneksi olkoon arvasit oikein! Siihen sinulla meni {0} yritystä...", maara);
+            Console.ReadLine();
+
+        }
+
+        
+        public static void tehtava18()
+        {
+            string lause, revlause;
+            Console.WriteLine("Kirjoita sanoja yhteen:");
+            lause = Console.ReadLine();
+            char[] tempstr = lause.ToCharArray();
+            Array.Reverse(tempstr);
+            revlause = new string(tempstr);
+            bool caseignore = lause.Equals(revlause, StringComparison.OrdinalIgnoreCase);
+            if (caseignore == true)
+            {
+                Console.WriteLine("Kirjoittamasi sana:" + lause + " On palidromi...");
+            }
+            else
+            {
+                Console.WriteLine("Kirjoittamasi sana: " + lause + " Ei ole palidromi....");
+            }
+            Console.ReadLine();
+
+        }
+
+        public static void tehtava19()
+        {
+            string sana = "putkea";
+
+            
+            char[] a = new char[sana.Length];
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = '_';
+            }
+            Console.WriteLine(".....HIRSIPUU.....");
+            Console.Write("Sanasi on: ");
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.Write(a[i] + "  ");
+            }
+            Console.WriteLine();
+
+            int luku = 0;
+            do
+            {
+                Console.Write("Anna kirjain: ");
+                char input = Console.ReadLine().ToCharArray()[0];
+
+                for (int i = 0; i < sana.Length; i++)
+                {
+                    
+                    if (sana[i] == input)
+                    {
+                        luku++; 
+                        a[i] = input;  
+
+                        
+                        for (int j = 0; j < a.Length; j++)
+                        {
+                            Console.Write(a[j] + " ");
+                        }
+                    }
+                }
+                
+            }
+
+            while (luku < a.Length);
+            Console.WriteLine("You guessed it right");
+            Console.ReadLine();
+        }
+
   }
 }
             
