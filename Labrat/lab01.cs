@@ -249,8 +249,87 @@ class lab01
         }
         public static void tehtava20()
             {
-            
-}
-}
+        
+        int operation = 0;
+        
+        double result = 0;
+
+        //Eka luku
+        Console.WriteLine("Anna eka numero :");
+        string stringFirstNumber = Console.ReadLine();
+        double firstNumber = Convert.ToDouble(stringFirstNumber);
+
+        //Toka luku
+        Console.WriteLine("Anna toinen numero :");
+        string stringSecondNumber = Console.ReadLine();
+        double secondNumber = Convert.ToDouble(stringSecondNumber);
+
+        //Valitaan mitä tehdään
+        Console.WriteLine("Mitäs tehrään + (lussataan), - (miinustetaan), * (kerrotaan), / (jaeskellaan), ^ (exponenttiin) or % (jakojäännös) :");
+        string stringOperation = Console.ReadLine();
+
+        
+        if (stringOperation == "+" || stringOperation == "lussataan")
+        {
+            operation = 1;
+        }
+        else if (stringOperation == "-" || stringOperation == "miinustetaan")
+        {
+            operation = 2;
+        }
+        else if (stringOperation == "*" || stringOperation == "kerrotaan")
+        {
+            operation = 3;
+        }
+        else if (stringOperation == "/" || stringOperation == "jaeskellaan")
+        {
+            operation = 4;
+        }
+        else if (stringOperation == "^" || stringOperation == "exponenttiin")
+        {
+            operation = 5;
+        }
+        else if (stringOperation == "%" || stringOperation == "jakojäännös")
+        {
+            operation = 6;
+        }
+
+        //Tehdään valitun objektin mukaan
+
+        switch (operation)
+        {
+            case 1:
+                result = firstNumber + secondNumber;
+                break;
+
+            case 2:
+                result = firstNumber - secondNumber;
+                break;
+
+            case 3:
+                result = firstNumber * secondNumber;
+                break;
+
+            case 4:
+                result = firstNumber / secondNumber;
+                break;
+
+            case 5:
+                result = Math.Pow(firstNumber, secondNumber);
+                break;
+
+            case 6:
+                result = firstNumber % secondNumber;
+                break;
+        }
+        Console.WriteLine("\nTulos " + firstNumber + " " + stringOperation + " " + secondNumber + " = " + result + ".");
+        Console.ReadKey();
+            Console.WriteLine();
     }
+  }
+}
+            
+
+
+    
 
