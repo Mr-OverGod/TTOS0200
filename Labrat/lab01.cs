@@ -249,7 +249,7 @@ class lab01
         }
         public static void tehtava20()
             {
-        
+        //Perus laskin
         int operation = 0;
         
         double result = 0;
@@ -322,6 +322,7 @@ class lab01
                 result = firstNumber % secondNumber;
                 break;
         }
+            //Tulostetaan laskun loppu tulos
         Console.WriteLine("\nTulos " + firstNumber + " " + stringOperation + " " + secondNumber + " = " + result + ".");
         Console.ReadKey();
             Console.WriteLine();
