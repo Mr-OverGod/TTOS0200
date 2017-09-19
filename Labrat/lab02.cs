@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Labrat
-{
-    class lab02
+    { 
+   class lab02
     {
         public class Kiuas
         {
@@ -24,66 +25,68 @@ namespace Labrat
             }
             public string warming()
             {
-                string tiktik = "grrrrprrr\nprrrtiktitkitktiktiktik\n";
+                string tiktik = "tik tok\ntik tok\ntik tok\n";
 
                 return tiktik;
             }
             public string loyly()
             {
-                string ssh = "pshshhsshhsssshhhh";
+                string suhina = "ssshshhhh";
 
-                return ssh;
+                return suhina;
             }
         }
-        public class Kiuascontrol
+        public class Kiuassaato
         {
             public static void Controlpanel()
             {
-                Kiuas harvia = new Kiuas();
-                Console.WriteLine("Haluatko k‰ynnist‰‰ kiukaan (y/n)?");
+                Kiuas sauna = new Kiuas();
+                Console.WriteLine("K‰ynnistet‰‰nkˆ kiuas (y/n)??");
                 while (true)
                 {
                     string vastaus = Console.ReadLine();
                     if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
                     {
-                        harvia.paalla = true;
+                        sauna.paalla = true;
                         break;
                     }
                     else if (vastaus.Substring(0, 1) == "n" || vastaus.Substring(0, 1) == "N")
                     {
-                        harvia.paalla = false;
+                        sauna.paalla = false;
                         break;
                     }
-                    Console.Write("Haluatko k‰ynnist‰‰ kiukaan (y/n)?");
+                    Console.Write("K‰ynnistet‰‰nkˆ kiuas (y/n)??");
                 }
-                if (harvia.paalla == true)
+                if (sauna.paalla == true)
                 {
-                    Console.Write("Mihin asteeseen haluat saunan l‰mmˆn? ");
-                    harvia.lampo = int.Parse(Console.ReadLine());
-                    Console.Write("Mihin prosenttiin haluat saunan kosteuden? ");
-                    harvia.kosteus = int.Parse(Console.ReadLine());
-                    Console.WriteLine(harvia.warming());
-                    Console.WriteLine("Kiuas on nyt valmis k‰yttˆˆn! l‰mpˆ on {0} celsiusta ja kosteus {1} prosenttia", harvia.lampo, harvia.kosteus);
-                    while (harvia.paalla == true)
+                    Console.Write("Kiukaan asteet? > ");
+                    sauna.lampo = int.Parse(Console.ReadLine());
+                    Console.Write("Mik‰ kosteus % > ");
+                    sauna.kosteus = int.Parse(Console.ReadLine());
+                    Console.WriteLine(sauna.warming());
+                    Console.WriteLine("Sauna on ready!! l‰mpˆ on {0} celsiusta ja kosteus {1} prosenttia", sauna.lampo, sauna.kosteus);
+                    while (sauna.paalla == true)
                     {
 
                         Console.Write("Haluatko heitt‰‰ lˆyly‰ (y/n)?");
                         string vastaus = Console.ReadLine();
                         if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
                         {
-                            Console.WriteLine(harvia.loyly());
+                            Console.WriteLine(sauna.loyly());
                         }
 
                         Console.Write("Haluatko lopettaa saunomisen? (y/n)?");
                         vastaus = Console.ReadLine();
-                        if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") harvia.paalla = false;
+                        if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") sauna.paalla = false;
 
 
                     }
                 }
 
 
-                Console.WriteLine("Kiuas on nyt sammutettu! harvia kiitt‰‰!!");
+                Console.WriteLine("Sauna on vaihteeksi kylm‰");
+
+                Console.ReadLine();
 
             }
         }
@@ -106,49 +109,70 @@ namespace Labrat
             }
             public string running()
             {
-                return "hrrrhrrrhrrrhrr";
+                return "hurhurhur";
             }
             public string lingging()
             {
-                return "viuhviuhviuhviuhviuhviuh";
+                return "pv zk pv pv zk pv zk kz zk pv pv pv zk pv zk zk pzk pzk pvzkpkzvpvzk kkkkkk bsch";
             }
         }
-        public class Pesukonecontrol
+        public class Pesukonesaato
         {
             public static void Controlpanel()
             {
-                Pesukone rosenlew = new Pesukone();
-                Console.Write("Hei, haluatko pest‰ pyykki‰ (y/n)?");
+                Pesukone linkomaatti = new Pesukone();
+
+                Console.Write("Pest‰‰nkˆ pyykit (y/n)?");
+
                 string vastaus = Console.ReadLine();
-                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") rosenlew.paalla = true;
-                else rosenlew.paalla = false;
-                if (rosenlew.paalla == false) { Console.WriteLine("N‰kemiin!"); Environment.Exit(1); }
-                Console.Write("Mill‰ l‰mpˆtilalla haluat pest‰ pyykkisi? ");
-                rosenlew.lampo = int.Parse(Console.ReadLine());
-                Console.Write("Kuinka kovan pesun haluat pyykillesi 1-10 (hell‰varainen - raju)? ");
-                rosenlew.kovuus = int.Parse(Console.ReadLine());
-                Console.Write("Haluatko linkouksen (y/n)? ");
+
+                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") linkomaatti.paalla = true;
+
+                else linkomaatti.paalla = false;
+
+                if (linkomaatti.paalla == false) { Console.WriteLine("Ei sitten"); Environment.Exit(1); }
+
+                Console.Write("Valitse l‰mpˆtila > ");
+
+                linkomaatti.lampo = int.Parse(Console.ReadLine());
+
+                Console.Write("Kuinka kovan pesun haluat pyykillesi 1-5 (Silk - Bricks)? ");
+
+                linkomaatti.kovuus = int.Parse(Console.ReadLine());
+
+                Console.Write("Lingotaanko (y/n)? ");
+
                 vastaus = Console.ReadLine();
-                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") rosenlew.linkous = true;
+
+                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") linkomaatti.linkous = true;
+
                 string linko = "";
-                if (rosenlew.linkous == true) linko = "haluat linkouksen";
-                else if (rosenlew.linkous == false) linko = "et halua linkousta";
-                Console.WriteLine("Valitsit seuraavat vaihtoehdot: L‰mpˆtila {0} celsius astetta, kovuus {1} ja {2}.", rosenlew.lampo, rosenlew.kovuus, linko);
+
+                if (linkomaatti.linkous == true) linko = "Yuup Lingotaan";
+
+                else if (linkomaatti.linkous == false) linko = "Ei Lingota";
+
+                Console.WriteLine("Pesun l‰mpˆtila {0} celsius astetta, kovuus {1} ja {2}.", linkomaatti.lampo, linkomaatti.kovuus, linko);
+
                 Console.Write("Aloitetaanko ohjelma (y/n)? ");
+
                 vastaus = Console.ReadLine();
+
                 if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
                 {
-                    Console.WriteLine(rosenlew.running());
-                    if (rosenlew.linkous == true)
+                    Console.WriteLine(linkomaatti.running());
+                    if (linkomaatti.linkous == true)
                     {
-                        Console.WriteLine("Aloitetaan linkous!");
-                        Console.WriteLine(rosenlew.lingging());
+                        Console.WriteLine("Linko party");
+                        Console.WriteLine(linkomaatti.lingging());
                     }
-                    Console.WriteLine("Ohjelma on valmis!");
+                    Console.WriteLine("Vaateet pesty!");
                 }
 
 
-                Console.WriteLine("Ohjelma on lopetettu. Kiitos!!");
+                Console.WriteLine("Ohjelma on lopetettu.");
+
+                Console.ReadLine();
 
 
             }
@@ -169,45 +193,62 @@ namespace Labrat
             }
             public string startting()
             {
-                return "Tsimm";
+                return "Jeesus tulee";
             }
+            public string ending() { return "Jeesus menee"; }
+
             public string change()
             {
-                return "Tsuim";
+                return "Piip";
             }
 
         }
-        public class Tvcontrol
+        public class Tvsaato
         {
             public static void Controlpanel()
             {
-                Tv lg = new Tv();
-                Console.Write("K‰ynnistet‰‰nkˆ televisio (y/n)? ");
+                Tv telkkari = new Tv();
+
+                Console.Write("Avataanko televisio (y/n)? ");
+
                 string vastaus = Console.ReadLine();
-                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") lg.paalla = true;
-                else lg.paalla = false;
-                if (lg.paalla == true)
+
+                if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") telkkari.paalla = true;
+
+                else telkkari.paalla = false;
+
+                if (telkkari.paalla == true)
                 {
-                    Console.WriteLine(lg.startting());
+                    Console.WriteLine(telkkari.startting());
                     do
                     {
-                        Console.Write("Valitse joku kanava? ");
-                        lg.kanava = int.Parse(Console.ReadLine());
-                        Console.Write("S‰‰d‰ ‰‰nenvoimakkuus kohdilleen? ");
-                        lg.volume = int.Parse(Console.ReadLine());
-                        Console.WriteLine(lg.change());
-                        Console.Write("Valitsit kanavan {0} ja ‰‰nen voimakkuutesi on {1} astetta. Haluatko vaihtaa jotain (y/n)?", lg.kanava, lg.volume);
+                        Console.Write("Kanava? > ");
+
+                        telkkari.kanava = int.Parse(Console.ReadLine());
+
+                        Console.Write("ƒ‰nenvoimakkuus? > ");
+
+                        telkkari.volume = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine(telkkari.change());
+
+                        Console.Write("Valitsit kanavan {0} ja ‰‰nen voimakkuutesi on {1} astetta. Haluatko vaihtaa jotain (y/n)?", telkkari.kanava, telkkari.volume);
+
                         vastaus = Console.ReadLine();
+
                         if (vastaus.Substring(0, 1) == "N" || vastaus.Substring(0, 1) == "n")
                         {
                             Console.Write("Haluatko sammuttaa tvn (y/n)? ");
                             vastaus = Console.ReadLine();
-                            if (vastaus.Substring(0, 1) == "Y" || vastaus.Substring(0, 1) == "y") lg.paalla = false;
+                            if (vastaus.Substring(0, 1) == "Y" || vastaus.Substring(0, 1) == "y") telkkari.paalla = false;
                         }
-                    } while (lg.paalla != false);
-                    Console.WriteLine("Telvisio sammuu, heihei!");
-                    Console.WriteLine(lg.startting());
+                    } while (telkkari.paalla != false);
+                    Console.WriteLine("**Pimeys**");
+                    Console.WriteLine(telkkari.ending());
+                    Console.ReadLine();
                 }
 
             }
         }
+    }
+}

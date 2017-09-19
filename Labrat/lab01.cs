@@ -223,7 +223,7 @@ class lab01
             do {
                 Console.WriteLine("Anna luku >");
                 luku = int.Parse(Console.ReadLine());
-                luku = luku;
+                
 
                 summa = summa + luku;
 
@@ -531,6 +531,9 @@ class lab01
             Console.WriteLine("You guessed it right");
             Console.ReadLine();
         }
+
+
+
 
   }
 }

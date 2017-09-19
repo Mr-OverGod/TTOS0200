@@ -10,7 +10,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Labrat.lab02.Kiuas();
+            Labrat.lab02.Tvsaato.Controlpanel();
         }
     }
 }
