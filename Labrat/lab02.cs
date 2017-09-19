@@ -12,12 +12,17 @@ namespace Labrat
         public class Kiuas
         {
             public bool paalla { get; set; }
+
             public int lampo { get; set; }
+
             public int kosteus { get; set; }
+
             public Kiuas(bool paalla, int Teho, int kosteus) : base()
             {
                 this.paalla = paalla;
+
                 this.lampo = Teho;
+
                 this.kosteus = kosteus;
             }
             public Kiuas()
@@ -41,7 +46,9 @@ namespace Labrat
             public static void Controlpanel()
             {
                 Kiuas sauna = new Kiuas();
+
                 Console.WriteLine("Käynnistetäänkö kiuas (y/n)??");
+
                 while (true)
                 {
                     string vastaus = Console.ReadLine();
@@ -60,23 +67,33 @@ namespace Labrat
                 if (sauna.paalla == true)
                 {
                     Console.Write("Kiukaan asteet? > ");
+
                     sauna.lampo = int.Parse(Console.ReadLine());
+
                     Console.Write("Mikä kosteus % > ");
+
                     sauna.kosteus = int.Parse(Console.ReadLine());
+
                     Console.WriteLine(sauna.warming());
+
                     Console.WriteLine("Sauna on ready!! lämpö on {0} celsiusta ja kosteus {1} prosenttia", sauna.lampo, sauna.kosteus);
+
                     while (sauna.paalla == true)
                     {
 
                         Console.Write("Haluatko heittää löylyä (y/n)?");
+
                         string vastaus = Console.ReadLine();
+
                         if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
                         {
                             Console.WriteLine(sauna.loyly());
                         }
 
                         Console.Write("Haluatko lopettaa saunomisen? (y/n)?");
+
                         vastaus = Console.ReadLine();
+
                         if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y") sauna.paalla = false;
 
 
@@ -93,15 +110,21 @@ namespace Labrat
         public class Pesukone
         {
             public bool paalla { get; set; }
+
             public int lampo { get; set; }
+
             public int kovuus { get; set; }
+
             public bool linkous { get; set; }
 
             public Pesukone(bool paalla, int lampo, int kovuus, bool linkous) : base()
             {
                 this.paalla = paalla;
+
                 this.lampo = lampo;
+
                 this.kovuus = kovuus;
+
                 this.linkous = linkous;
             }
             public Pesukone()
@@ -113,7 +136,7 @@ namespace Labrat
             }
             public string lingging()
             {
-                return "pv zk pv pv zk pv zk kz zk pv pv pv zk pv zk zk pzk pzk pvzkpkzvpvzk kkkkkk bsch";
+                return "pv zk pv pv zk pv zk kz zk pv pv pv zk pv zk zk pzk pzk pvzkpkzvpvzk kkkkkk bsch"; //Google beatboxin
             }
         }
         public class Pesukonesaato
@@ -136,7 +159,7 @@ namespace Labrat
 
                 linkomaatti.lampo = int.Parse(Console.ReadLine());
 
-                Console.Write("Kuinka kovan pesun haluat pyykillesi 1-5 (Silk - Bricks)? ");
+                Console.Write("Kuinka kovan pesun haluat pyykillesi 1-5 (Silk - Bricks)? "); //You really can wash bricks with washing machine
 
                 linkomaatti.kovuus = int.Parse(Console.ReadLine());
 
@@ -161,9 +184,11 @@ namespace Labrat
                 if (vastaus.Substring(0, 1) == "y" || vastaus.Substring(0, 1) == "Y")
                 {
                     Console.WriteLine(linkomaatti.running());
+
                     if (linkomaatti.linkous == true)
                     {
                         Console.WriteLine("Linko party");
+
                         Console.WriteLine(linkomaatti.lingging());
                     }
                     Console.WriteLine("Vaateet pesty!");
@@ -180,12 +205,17 @@ namespace Labrat
         public class Tv
         {
             public bool paalla { get; set; }
+
             public int kanava { get; set; }
+
             public int volume { get; set; }
+
             public Tv(bool paalla, int kanava, int volume) : base()
             {
                 this.paalla = paalla;
+
                 this.kanava = kanava;
+
                 this.volume = volume;
             }
             public Tv()
@@ -195,11 +225,11 @@ namespace Labrat
             {
                 return "Jeesus tulee";
             }
-            public string ending() { return "Jeesus menee"; }
+            public string ending() { return "Jeesus menee"; } // Or does he
 
             public string change()
             {
-                return "Piip";
+                return "Piip"; //Kutsutaan joka kerta kun tehdään muutoksia
             }
 
         }
@@ -243,8 +273,11 @@ namespace Labrat
                             if (vastaus.Substring(0, 1) == "Y" || vastaus.Substring(0, 1) == "y") telkkari.paalla = false;
                         }
                     } while (telkkari.paalla != false);
+
                     Console.WriteLine("**Pimeys**");
+
                     Console.WriteLine(telkkari.ending());
+
                     Console.ReadLine();
                 }
 
