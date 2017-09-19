@@ -10,7 +10,7 @@ namespace Labrat
     {
         static void Main(string[] args)
         {
-            Labrat.lab01.tehtava20();
+            Labrat.lab02.Kiuas();
         }
     }
 }

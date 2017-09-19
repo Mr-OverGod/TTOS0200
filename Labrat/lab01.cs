@@ -413,7 +413,7 @@ class lab01
         public static void tehtava15()
         {
             int kerros;
-            int merkki = 1;
+            
             Console.Write("Kuinka korkean puun haluat: ");
             kerros = int.Parse(Console.ReadLine());
             for (int i = 0; i < kerros - 2; i++)
