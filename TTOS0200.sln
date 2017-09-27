@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOdemot", "OOdemot\OOdemot.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labrat", "Labrat\Labrat.csproj", "{064C22B8-24F3-4248-9E20-1E2D09868BBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labra04", "ConsoleApp1\Labra04.csproj", "{63D78DA5-FFB9-4B57-A787-5C7E4CAE0A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{064C22B8-24F3-4248-9E20-1E2D09868BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{064C22B8-24F3-4248-9E20-1E2D09868BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{064C22B8-24F3-4248-9E20-1E2D09868BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D78DA5-FFB9-4B57-A787-5C7E4CAE0A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D78DA5-FFB9-4B57-A787-5C7E4CAE0A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D78DA5-FFB9-4B57-A787-5C7E4CAE0A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D78DA5-FFB9-4B57-A787-5C7E4CAE0A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
