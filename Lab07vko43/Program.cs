@@ -11,18 +11,27 @@ namespace lab07
     {
         static void Main(string[] args)
         {
-            string nimi;
-            string filupath = @"D:\K9037";
-            //luodaan Streamwriter olio johon kirjoitetaan
-            StreamWriter sw = new StreamWriter(filupath + @"\testi.txt");
-            do
+
+            try
             {
-                Console.Write("Anna nimi (Enter lopettaa): ");
-                nimi = Console.ReadLine();
-                if (nimi.Length > 0)
-                    sw.WriteLine(nimi);
-            } while (nimi.Length != 0);
-            sw.Close();
+                string nimi;
+                string filupath = @"D:\K9037";
+                //luodaan Streamwriter olio johon kirjoitetaan
+                StreamWriter sw = new StreamWriter(filupath + @"\testi.txt");
+                do
+                {
+                    Console.Write("Anna nimi (Enter lopettaa): ");
+                    nimi = Console.ReadLine();
+                    if (nimi.Length > 0)
+                        sw.WriteLine(nimi);
+                } while (nimi.Length != 0);
+                sw.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
         }
     }
 }
